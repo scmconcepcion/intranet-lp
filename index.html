@@ -6,17 +6,13 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="/intranet-lp/style.css">
+<link rel="stylesheet" href="/intranet-lp/style.css?v=5">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-
-<!-- Toggle -->
-<button class="toggle" id="themeBtn">🌙 / ☀️</button>
 
 <!-- Promo -->
 <div class="promo">おすすめプラン：50,000円（人気No.1）</div>
@@ -26,7 +22,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <h1>社内業務を、もっとシンプルに。</h1>
 <p>
 勤怠・チャット・日報・顧客管理まで<br>
-すべてを一つに集約した次世代イントラ
+すべてを一つに集約したイントラシステム
 </p>
 
 <button onclick="scrollToContact()">無料で相談する</button>
@@ -92,29 +88,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <section class="contact" id="contact">
 <h2>お問い合わせ</h2>
 
-<!-- ✅ MAILTO FORM -->
 <form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
 
 <input name="会社名" placeholder="会社名" required>
 <input type="email" name="メール" placeholder="メール" required>
-
 <textarea name="内容" placeholder="内容" required></textarea>
 
 <button type="submit">送信</button>
 
 </form>
-
 </section>
 
 <footer>© 2026 社内イントラDX</footer>
 
-<!-- Script -->
 <script>
-
-// theme toggle
-document.getElementById("themeBtn").onclick = function(){
-document.body.classList.toggle("light");
-};
 
 // plan selection
 function selectPlan(el){
