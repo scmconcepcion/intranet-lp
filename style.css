@@ -1,162 +1,117 @@
-/* ===== COLORS ===== */
 :root{
 --bg:#f8fafc;
---section:#ffffff;
 --card:#ffffff;
-
 --primary:#2b6cb0;
 --accent:#38bdf8;
-
 --text:#1e293b;
 --sub:#64748b;
 }
 
-/* ===== BASE ===== */
 body{
 margin:0;
-font-family:'Inter', sans-serif;
+font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
-line-height:1.6;
 }
 
-/* ===== PROMO ===== */
+/* promo */
 .promo{
 background:#1e3a5f;
 color:white;
 text-align:center;
 padding:12px;
 font-weight:600;
-letter-spacing:0.5px;
 }
 
-/* ===== HERO ===== */
+/* hero */
 .hero{
 text-align:center;
-padding:140px 20px 180px;
+padding:140px 20px;
 background:linear-gradient(135deg,#2b6cb0,#4fd1c5);
 color:white;
-position:relative;
-overflow:hidden;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-bottom:-80px;
-left:0;
-width:100%;
-height:160px;
-background:var(--bg);
-border-top-left-radius:50% 100%;
-border-top-right-radius:50% 100%;
 }
 
 .hero h1{
-font-size:48px;
-font-weight:700;
-text-shadow:0 6px 20px rgba(0,0,0,0.25);
-}
-
-.hero p{
-margin-top:15px;
-opacity:0.95;
+font-size:46px;
 }
 
 .hero button{
-margin-top:30px;
-padding:14px 32px;
-border-radius:999px;
+margin-top:20px;
+padding:12px 28px;
 border:none;
+border-radius:999px;
 background:white;
 color:#1e3a5f;
-font-weight:600;
 cursor:pointer;
-box-shadow:0 6px 20px rgba(0,0,0,0.15);
-transition:0.25s;
 }
 
-.hero button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* ===== PRICING ===== */
+/* pricing */
 .pricing{
-padding:100px 20px 80px;
+padding:80px 20px;
 text-align:center;
-background:var(--section);
-}
-
-.pricing h2{
-font-size:28px;
-margin-bottom:10px;
 }
 
 .plans{
 display:flex;
-gap:25px;
+gap:20px;
 justify-content:center;
 flex-wrap:wrap;
-margin-top:40px;
 }
 
 .plan{
 background:var(--card);
-padding:30px;
-border-radius:18px;
+padding:25px;
+border-radius:16px;
 width:260px;
 border:1px solid #e2e8f0;
-transition:0.3s;
 }
 
-.plan:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(0,0,0,0.1);
-}
-
-/* recommended */
 .recommended{
 border:2px solid var(--primary);
-box-shadow:0 15px 40px rgba(43,108,176,0.2);
 }
 
-/* badge */
 .badge{
-background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+background:var(--primary);
 color:white;
-padding:6px 16px;
+padding:4px 10px;
 border-radius:999px;
 font-size:12px;
-font-weight:600;
 display:inline-block;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 /* plan list */
-.plan ul{
+.plan-list{
+list-style:none;
+padding:0;
 text-align:left;
-padding-left:18px;
 }
 
-/* ===== DETAILS (もっと見る) ===== */
+.plan-list li{
+margin:8px 0;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.plan-list i{
+color:var(--primary);
+}
+
+/* details */
 details{
-margin-top:12px;
-text-align:left;
+margin-top:10px;
 }
 
 summary{
 cursor:pointer;
 font-weight:600;
 color:var(--primary);
-margin-top:10px;
 list-style:none;
 }
 
-/* custom arrow */
 summary::after{
 content:" ▼";
-font-size:12px;
 }
 
 summary::-webkit-details-marker{
@@ -167,60 +122,43 @@ details[open] summary::after{
 content:" ▲";
 }
 
-/* expanded list */
-details ul{
-margin-top:10px;
-padding-top:10px;
-border-top:1px solid #e2e8f0;
+/* feature grid */
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+gap:15px;
+margin-top:15px;
 }
 
-/* ===== CONTACT ===== */
-.contact{
-padding:100px 20px;
+.feature-card{
+background:#f1f5f9;
+padding:18px;
+border-radius:12px;
 text-align:center;
-background:var(--section);
 }
 
-.contact h2{
-font-size:28px;
-margin-bottom:20px;
+.feature-card i{
+font-size:22px;
+color:var(--primary);
+margin-bottom:8px;
+}
+
+/* contact */
+.contact{
+padding:80px 20px;
+text-align:center;
 }
 
 input,textarea{
 display:block;
-width:300px;
-max-width:90%;
-margin:12px auto;
-padding:12px;
-border-radius:8px;
-border:1px solid #cbd5e1;
-font-size:14px;
+width:260px;
+margin:10px auto;
+padding:10px;
 }
 
-textarea{
-height:100px;
-resize:none;
-}
-
-.contact button{
-margin-top:10px;
-background:var(--primary);
-color:white;
-border:none;
-padding:12px 26px;
-border-radius:6px;
-cursor:pointer;
-transition:0.2s;
-}
-
-.contact button:hover{
-background:#1e40af;
-}
-
-/* ===== FOOTER ===== */
+/* footer */
 footer{
 text-align:center;
-padding:40px;
+padding:30px;
 color:var(--sub);
-font-size:14px;
 }
