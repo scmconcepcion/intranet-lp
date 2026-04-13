@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css?v=3">
+
 /* ======================
    COLOR SYSTEM (FIXED)
 ====================== */
@@ -111,23 +113,23 @@ border-radius:16px;
 width:240px;
 cursor:pointer;
 
-/* thin border ALWAYS visible */
-border:1px solid rgba(255,255,255,0.1);
+/* thin default border */
+border:1px solid rgba(255,255,255,0.15);
 
-transition:all 0.25s ease;
+transition:all 0.3s ease;
 }
 
-/* hover (subtle) */
+/* hover */
 .plan:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.2);
 }
 
 /* selected */
 .plan.active{
-border:1.5px solid var(--accent); /* dark green thin */
-transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(0,0,0,0.2);
+border:1.5px solid #14532d; /* dark green */
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 15px 30px rgba(0,0,0,0.25);
 }
 
 /* RECOMMENDED (SPECIAL) */
@@ -188,8 +190,8 @@ transform:translateY(-5px);
 .card i{
 font-size:28px;
 
-/* hard-coded dark blue (no override issue) */
-color:#3b82f6;
+/* FORCE DARK BLUE */
+color:#1e40af !important;
 
 margin-bottom:10px;
 }
