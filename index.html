@@ -18,14 +18,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 <!-- TOGGLE -->
-<button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
-
+<button class="toggle" id="themeBtn">🌙 / ☀️</button>
 
 <!-- PROMO -->
 <div class="promo">
 おすすめ：すべての機能が使える人気プラン → 50,000円
 </div>
-
 
 <!-- HERO -->
 <section class="hero">
@@ -42,7 +40,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </section>
 
 
-<!-- PRICING (MOVED UP) -->
+<!-- PRICING -->
 <section class="pricing">
 
 <h2>まずはプランをご確認ください</h2>
@@ -50,10 +48,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="plans">
 
 <div class="plan">
-
 <h3>ライト</h3>
 <h1>30,000円</h1>
-<p>基本機能</p>
+
+<ul>
+<li>勤怠管理</li>
+<li>社内チャット</li>
+<li>カレンダー</li>
+</ul>
 
 </div>
 
@@ -64,7 +66,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
-<p>全機能対応</p>
+
+<ul>
+<li>勤怠管理</li>
+<li>社内チャット</li>
+<li>社内報</li>
+<li>カレンダー</li>
+<li>AI日報</li>
+<li>通知機能</li>
+<li>メンバー管理</li>
+<li>顧客管理</li>
+</ul>
 
 </div>
 
@@ -81,37 +93,37 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="grid">
 
 <div class="card">
-<i class="fa-solid fa-clock"></i>
+<i class="fa-regular fa-clock"></i>
 <h3>勤怠管理</h3>
 <p>出退勤を簡単管理</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-comments"></i>
+<i class="fa-regular fa-comment-dots"></i>
 <h3>チャット</h3>
 <p>リアルタイム連絡</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-calendar"></i>
+<i class="fa-regular fa-calendar"></i>
 <h3>カレンダー</h3>
 <p>予定を一元管理</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-robot"></i>
-<h3>AI日報</h3>
-<p>文章作成をサポート</p>
+<i class="fa-regular fa-clipboard"></i>
+<h3>日報</h3>
+<p>業務記録を効率化</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-bell"></i>
+<i class="fa-regular fa-bell"></i>
 <h3>通知</h3>
 <p>重要情報を共有</p>
 </div>
 
 <div class="card">
-<i class="fa-solid fa-users"></i>
+<i class="fa-regular fa-user"></i>
 <h3>メンバー管理</h3>
 <p>管理者権限対応</p>
 </div>
@@ -177,10 +189,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </footer>
 
 
+<!-- JS -->
 <script>
-function toggleTheme(){
-document.body.classList.toggle("light");
-}
+
+const btn = document.getElementById("themeBtn");
+
+btn.addEventListener("click", function() {
+  document.body.classList.toggle("light");
+});
+
 </script>
 
 </body>
