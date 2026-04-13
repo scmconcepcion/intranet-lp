@@ -26,7 +26,7 @@
 --section:#eef2ff;
 
 --primary:#2563eb;
---accent:#166534;
+--accent:#a14da1;
 
 --sub:#64748b;
 }
@@ -114,7 +114,7 @@ width:240px;
 cursor:pointer;
 
 /* thin default border */
-border:1px solid rgba(255,255,255,0.15);
+border:2px solid rgba(91, 7, 171, 0.15);
 
 transition:all 0.3s ease;
 }
@@ -127,7 +127,7 @@ box-shadow:0 12px 25px rgba(0,0,0,0.2);
 
 /* selected */
 .plan.active{
-border:1.5px solid #14532d; /* dark green */
+border:1.5px solid #7c18a1; /* purple */
 transform:translateY(-8px) scale(1.03);
 box-shadow:0 15px 30px rgba(0,0,0,0.25);
 }
