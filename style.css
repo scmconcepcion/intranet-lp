@@ -1,353 +1,194 @@
-body{
+:root{
 
-margin:0;
-
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI";
-
-background:#0b1220;
-
-color:white;
+--bg:#0b1220;
+--text:white;
+--card:rgba(255,255,255,.05);
+--section:#1e293b;
+--primary:#22c55e;
+--sub:#94a3b8;
 
 }
 
+.light{
+
+--bg:#f8fafc;
+--text:#1e293b;
+--card:white;
+--section:#eef2ff;
+--primary:#2563eb;
+--sub:#64748b;
+
+}
+
+body{
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI";
+background:var(--bg);
+color:var(--text);
+}
+
+
+/* toggle */
+
+.toggle{
+position:fixed;
+top:20px;
+right:20px;
+background:var(--primary);
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:20px;
+cursor:pointer;
+}
 
 
 /* promo */
 
 .promo{
-
-background:#22c55e;
-
+background:var(--primary);
 text-align:center;
-
-padding:12px;
-
+padding:10px;
 font-weight:bold;
-
+color:white;
 }
-
 
 
 /* hero */
 
 .hero{
-
-background:linear-gradient(120deg,#0b1d3a,#4c1d95);
-
 text-align:center;
-
 padding:140px 20px;
-
-}
-
-.hero h1{
-
-font-size:46px;
-
 }
 
 .hero p{
-
-opacity:.85;
-
-margin-top:15px;
-
+color:var(--sub);
 }
 
 .hero button{
-
-background:#22c55e;
-
+background:var(--primary);
 border:none;
-
-padding:15px 30px;
-
-border-radius:30px;
-
+padding:14px 28px;
+border-radius:25px;
 color:white;
-
-font-size:16px;
-
-margin-top:25px;
-
-cursor:pointer;
-
+margin-top:20px;
 }
 
 
+/* sections */
 
-/* intro */
-
-.intro{
-
-text-align:center;
-
-padding:80px 20px;
-
-}
-
-
-
-/* features */
-
-.features{
-
+.features,
+.options,
+.contact{
 padding:100px 20px;
-
 text-align:center;
-
 }
+
+.benefit{
+padding:100px 20px;
+text-align:center;
+background:var(--section);
+}
+
+
+/* cards */
 
 .grid{
-
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
 gap:25px;
-
 max-width:1000px;
-
 margin:auto;
-
 margin-top:40px;
-
 }
 
 .card{
-
-background:rgba(255,255,255,.05);
-
+background:var(--card);
 padding:30px;
-
 border-radius:15px;
-
-border:1px solid rgba(255,255,255,.08);
-
 }
 
 .card i{
-
-font-size:24px;
-
-margin-bottom:10px;
-
-color:#60a5fa;
-
+color:var(--primary);
 }
-
-
-
-/* benefit */
-
-.benefit{
-
-text-align:center;
-
-padding:100px 20px;
-
-background:linear-gradient(120deg,#1e293b,#312e81);
-
-}
-
 
 
 /* options */
 
-.options{
-
-padding:100px 20px;
-
-text-align:center;
-
-}
-
 .option-grid{
-
 display:flex;
-
 gap:30px;
-
 justify-content:center;
-
 flex-wrap:wrap;
-
 margin-top:40px;
-
 }
 
 .option-card{
-
-background:rgba(255,255,255,.05);
-
-padding:35px;
-
-border-radius:15px;
-
-width:260px;
-
-border:1px solid rgba(255,255,255,.08);
-
+background:var(--card);
+padding:30px;
+border-radius:12px;
+width:250px;
 }
-
-.option-card i{
-
-font-size:26px;
-
-margin-bottom:15px;
-
-color:#22c55e;
-
-}
-
 
 
 /* pricing */
 
 .pricing{
-
 padding:100px 20px;
-
 text-align:center;
-
-background:linear-gradient(120deg,#1e3a8a,#6d28d9);
-
+background:var(--section);
 }
 
 .plans{
-
 display:flex;
-
 gap:30px;
-
 justify-content:center;
-
 flex-wrap:wrap;
-
 margin-top:40px;
-
 }
 
 .plan{
-
-background:white;
-
-color:black;
-
-padding:35px;
-
-border-radius:15px;
-
-width:230px;
-
-}
-
-.plan button{
-
-margin-top:15px;
-
-padding:12px;
-
-width:100%;
-
-border:none;
-
-border-radius:8px;
-
-background:#0b1d3a;
-
-color:white;
-
+background:var(--card);
+padding:30px;
+border-radius:12px;
+width:220px;
 }
 
 .recommended{
-
-transform:scale(1.08);
-
-border:3px solid #22c55e;
-
-position:relative;
-
+border:2px solid var(--primary);
 }
 
 .badge{
-
-position:absolute;
-
-top:-12px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-background:#22c55e;
-
+background:var(--primary);
 color:white;
-
-padding:5px 12px;
-
+padding:5px 10px;
 border-radius:20px;
-
-font-size:12px;
-
 }
-
 
 
 /* contact */
 
-.contact{
-
-padding:100px 20px;
-
-text-align:center;
-
-}
-
 input,textarea{
-
 display:block;
-
 width:300px;
-
 margin:10px auto;
-
-padding:14px;
-
+padding:12px;
 border-radius:8px;
-
-border:none;
-
-}
-
-textarea{
-
-height:120px;
-
+border:1px solid #ccc;
 }
 
 .contact button{
-
-background:#22c55e;
-
+background:var(--primary);
 border:none;
-
-padding:14px 25px;
-
-border-radius:8px;
-
+padding:12px 20px;
 color:white;
-
 }
 
 
+/* footer */
 
 footer{
-
 text-align:center;
-
 padding:40px;
-
-opacity:.5;
-
+color:var(--sub);
 }
