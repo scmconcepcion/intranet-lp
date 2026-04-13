@@ -12,7 +12,6 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-
 <body>
 
 <!-- TOGGLE -->
@@ -20,7 +19,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <!-- PROMO -->
 <div class="promo">
-おすすめ：すべての機能が使える人気プラン → 50,000円
+おすすめ：人気No.1プラン → 50,000円
 </div>
 
 <!-- HERO -->
@@ -43,15 +42,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <ul>
 <li>勤怠管理</li>
-<li>チャット</li>
+<li>社内チャット</li>
 <li>カレンダー</li>
-<li>通知</li>
+<li>通知機能</li>
 </ul>
 
 </div>
 
-
-<div class="plan recommended" onclick="selectPlan(this)">
+<div class="plan recommended active" onclick="selectPlan(this)">
 
 <div class="badge">おすすめ</div>
 
@@ -60,16 +58,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <ul>
 <li>勤怠管理</li>
-<li>チャット</li>
+<li>社内チャット</li>
 <li>社内報</li>
 <li>カレンダー</li>
 <li>AI日報</li>
-<li>通知</li>
-<li>タイムライン</li>
+<li>通知機能</li>
+<li>メンバー管理</li>
 <li>連絡先管理</li>
-<li>管理者機能</li>
-<li>緊急連絡</li>
-<li>顧客情報</li>
+<li>緊急連絡先</li>
 </ul>
 
 </div>
@@ -85,17 +81,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div class="grid">
 
-<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3></div>
-<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>チャット</h3></div>
-<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3></div>
-<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3></div>
-<div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3></div>
-<div class="card"><i class="fa-regular fa-bell"></i><h3>通知</h3></div>
-<div class="card"><i class="fa-regular fa-clock-rotate-left"></i><h3>タイムライン</h3></div>
-<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3></div>
-<div class="card"><i class="fa-regular fa-user"></i><h3>管理者機能</h3></div>
-<div class="card"><i class="fa-solid fa-triangle-exclamation"></i><h3>緊急連絡</h3></div>
-<div class="card"><i class="fa-regular fa-folder"></i><h3>顧客情報</h3></div>
+<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3><p>出勤・退勤を簡単管理</p></div>
+<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>社内チャット</h3><p>リアルタイムで連絡</p></div>
+<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3><p>ニュース共有</p></div>
+<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3><p>スケジュール管理</p></div>
+<div class="card"><i class="fa-regular fa-robot"></i><h3>AI日報</h3><p>AIが文章作成をサポート</p></div>
+<div class="card"><i class="fa-regular fa-bell"></i><h3>通知機能</h3><p>重要情報をお知らせ</p></div>
+<div class="card"><i class="fa-regular fa-users"></i><h3>メンバー管理</h3><p>管理者権限で編集</p></div>
+<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3><p>社員・顧客情報整理</p></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>緊急連絡先</h3><p>すぐ確認可能</p></div>
 
 </div>
 
@@ -120,15 +114,12 @@ document.getElementById("themeBtn").addEventListener("click", function(){
   document.body.classList.toggle("light");
 });
 
-// select pricing
+// pricing select
 function selectPlan(selected){
-
-document.querySelectorAll(".plan").forEach(p=>{
-  p.classList.remove("active");
-});
-
-selected.classList.add("active");
-
+  document.querySelectorAll(".plan").forEach(p=>{
+    p.classList.remove("active");
+  });
+  selected.classList.add("active");
 }
 
 </script>

@@ -3,7 +3,13 @@
 --text:white;
 --card:rgba(255,255,255,.05);
 --section:#1e293b;
---primary:#22c55e;
+
+/* DARK BLUE (main) */
+--primary:#1e3a8a;
+
+/* DEEP GREEN (accent only) */
+--accent:#166534;
+
 --sub:#94a3b8;
 }
 
@@ -12,7 +18,10 @@
 --text:#1e293b;
 --card:white;
 --section:#eef2ff;
+
 --primary:#2563eb;
+--accent:#15803d;
+
 --sub:#64748b;
 }
 
@@ -85,21 +94,20 @@ padding:35px;
 border-radius:16px;
 width:240px;
 cursor:pointer;
-
 transition:all 0.3s ease;
 }
 
 /* hover */
 .plan:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 30px rgba(0,0,0,0.2);
+transform:translateY(-6px) scale(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* selected */
 .plan.active{
-border:3px solid var(--primary);
-transform:scale(1.08);
-box-shadow:0 20px 40px rgba(0,0,0,0.25);
+border:1.5px solid var(--accent);
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
 }
 
 .plan h1{
@@ -108,12 +116,15 @@ margin:10px 0;
 }
 
 .badge{
-background:var(--primary);
+font-size:15px;
+background:var(--accent);
 color:white;
-padding:5px 10px;
-border-radius:20px;
+padding:8px 16px;
+border-radius:999px;
 display:inline-block;
-margin-bottom:10px;
+margin-bottom:16px;
+font-weight:600;
+letter-spacing:1px;
 }
 
 .plan ul{
@@ -152,11 +163,12 @@ transition:.3s;
 
 .card:hover{
 transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card i{
 font-size:28px;
-color:var(--primary);
+color:var(--primary); /* now dark blue */
 margin-bottom:10px;
 }
 
