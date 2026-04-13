@@ -1,51 +1,38 @@
-<link rel="stylesheet" href="style.css?v=3">
-
-/* ======================
-   COLOR SYSTEM (FIXED)
-====================== */
-
 :root{
---bg:#0b1220;
---text:#ffffff;
---card:rgba(255,255,255,0.05);
+--bg:#0f172a;
 --section:#1e293b;
 
-/* MAIN = DARK BLUE */
---primary:#1e3a8a;
+--primary:#6366f1;
+--accent:#10b981;
 
-/* ACCENT = DARK GREEN (only for highlight) */
---accent:#14532d;
-
+--text:#e2e8f0;
 --sub:#94a3b8;
+
+--card:rgba(255,255,255,0.05);
 }
 
 .light{
---bg:#f8fafc;
---text:#1e293b;
---card:#ffffff;
---section:#eef2ff;
+--bg:#f1f5f9;
+--section:#e2e8f0;
 
---primary:#2563eb;
---accent:#a14da1;
+--primary:#4f46e5;
+--accent:#059669;
 
+--text:#0f172a;
 --sub:#64748b;
-}
 
-/* ======================
-   BASE
-====================== */
+--card:#ffffff;
+}
 
 body{
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI";
+font-family:'Inter', sans-serif;
 background:var(--bg);
 color:var(--text);
+line-height:1.6;
 }
 
-/* ======================
-   TOGGLE / PROMO
-====================== */
-
+/* toggle */
 .toggle{
 position:fixed;
 top:20px;
@@ -58,40 +45,51 @@ border-radius:20px;
 cursor:pointer;
 }
 
+/* promo */
 .promo{
 background:var(--primary);
 text-align:center;
 padding:10px;
 color:white;
-font-weight:bold;
+font-weight:600;
 }
 
-/* ======================
-   HERO
-====================== */
-
+/* hero */
 .hero{
 text-align:center;
-padding:140px 20px;
+padding:160px 20px;
+background:linear-gradient(180deg, rgba(99,102,241,0.12), transparent);
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+letter-spacing:-1px;
 }
 
 .hero p{
+font-size:18px;
 color:var(--sub);
 }
 
 .hero button{
-background:var(--primary);
+background:linear-gradient(135deg, var(--primary), #818cf8);
 border:none;
-padding:14px 28px;
-border-radius:25px;
+padding:14px 30px;
+border-radius:999px;
 color:white;
-margin-top:20px;
+margin-top:25px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
 }
 
-/* ======================
-   PRICING (FIXED)
-====================== */
+.hero button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
 
+/* pricing */
 .pricing{
 padding:100px 20px;
 text-align:center;
@@ -112,55 +110,53 @@ padding:35px;
 border-radius:16px;
 width:240px;
 cursor:pointer;
-
-/* thin default border */
-border:2px solid rgba(91, 7, 171, 0.15);
-
-transition:all 0.3s ease;
+border:1px solid rgba(255,255,255,0.15);
+transition:.3s;
 }
 
-/* hover */
 .plan:hover{
 transform:translateY(-6px);
-box-shadow:0 12px 25px rgba(0,0,0,0.2);
 }
 
-/* selected */
 .plan.active{
-border:1.5px solid #7c18a1; /* purple */
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 15px 30px rgba(0,0,0,0.25);
-}
-
-/* RECOMMENDED (SPECIAL) */
-.plan.recommended{
 border:1.5px solid var(--accent);
+transform:translateY(-8px) scale(1.03);
 }
-
-/* ======================
-   BADGE (FIXED STYLE)
-====================== */
 
 .badge{
-display:inline-block;
 background:var(--accent);
 color:white;
-
-padding:6px 16px;
-font-size:14px;
-
+padding:8px 16px;
 border-radius:999px;
-
-margin-bottom:12px;
-
+font-size:14px;
 font-weight:600;
-letter-spacing:1px;
+margin-bottom:12px;
+display:inline-block;
+animation:float 2.5s ease-in-out infinite;
 }
 
-/* ======================
-   FEATURES (FIXED COLOR)
-====================== */
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-4px);}
+100%{transform:translateY(0);}
+}
 
+.plan h1{
+font-size:34px;
+}
+
+.plan ul{
+list-style:none;
+padding:0;
+margin-top:15px;
+text-align:left;
+}
+
+.plan li{
+margin:6px 0;
+}
+
+/* features */
 .features{
 padding:100px 20px;
 text-align:center;
@@ -178,28 +174,22 @@ margin-top:40px;
 .card{
 background:var(--card);
 padding:25px;
-border-radius:12px;
-transition:0.25s;
+border-radius:14px;
+transition:.25s;
+backdrop-filter:blur(6px);
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
-/* IMPORTANT: FORCE BLUE ICON */
 .card i{
-font-size:28px;
-
-/* FORCE DARK BLUE */
-color:#979eb6 !important;
-
-margin-bottom:10px;
+font-size:30px;
+color:var(--primary);
+margin-bottom:12px;
 }
 
-/* ======================
-   CONTACT
-====================== */
-
+/* contact */
 .contact{
 padding:100px 20px;
 text-align:center;
@@ -221,10 +211,7 @@ padding:12px 20px;
 color:white;
 }
 
-/* ======================
-   FOOTER
-====================== */
-
+/* footer */
 footer{
 text-align:center;
 padding:40px;
