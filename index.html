@@ -15,18 +15,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
+<!-- Toggle -->
 <button class="toggle" id="themeBtn">🌙 / ☀️</button>
 
+<!-- Promo -->
 <div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
+<!-- Hero -->
 <section class="hero">
 <h1>社内業務を、もっとシンプルに。</h1>
-
 <p>
 勤怠・チャット・日報・顧客管理まで<br>
 すべてを一つに集約した次世代イントラ
 </p>
 
+<button onclick="scrollToContact()">無料で相談する</button>
+</section>
+
+<!-- Pricing -->
 <section class="pricing">
 <h2>プラン</h2>
 
@@ -63,6 +69,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 </div>
 </section>
 
+<!-- Features -->
 <section class="features">
 <h2>主な機能</h2>
 
@@ -74,32 +81,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3></div>
 <div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3></div>
 <div class="card"><i class="fa-regular fa-bell"></i><h3>通知機能</h3></div>
-<div class="card"><i class="fa-regular fa-users"></i><h3>メンバー管理</h3></div>
+<div class="card"><i class="fa-solid fa-users"></i><h3>メンバー管理</h3></div>
 <div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3></div>
 <div class="card"><i class="fa-solid fa-shield"></i><h3>緊急連絡先</h3></div>
 
 </div>
 </section>
 
-<section class="contact">
+<!-- Contact -->
+<section class="contact" id="contact">
 <h2>お問い合わせ</h2>
-<input placeholder="会社名">
-<input placeholder="メール">
-<textarea placeholder="内容"></textarea>
-<button>送信</button>
+
+<!-- ✅ MAILTO FORM -->
+<form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
+
+<input name="会社名" placeholder="会社名" required>
+<input type="email" name="メール" placeholder="メール" required>
+
+<textarea name="内容" placeholder="内容" required></textarea>
+
+<button type="submit">送信</button>
+
+</form>
+
 </section>
 
 <footer>© 2026 社内イントラDX</footer>
 
+<!-- Script -->
 <script>
+
+// theme toggle
 document.getElementById("themeBtn").onclick = function(){
 document.body.classList.toggle("light");
 };
 
+// plan selection
 function selectPlan(el){
 document.querySelectorAll(".plan").forEach(p=>p.classList.remove("active"));
 el.classList.add("active");
 }
+
+// scroll to contact
+function scrollToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior: "smooth"
+});
+}
+
 </script>
 
 </body>
