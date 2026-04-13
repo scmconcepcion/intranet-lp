@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/intranet-lp/style.css?v=8">
+<link rel="stylesheet" href="style.css?v=10">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -21,10 +21,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <section class="hero">
 <h1>社内業務を、もっとシンプルに。</h1>
 <p>勤怠・チャット・日報・顧客管理まで<br>すべてを一つに集約</p>
-
-<a href="#plans">
-<button>プランを見る</button>
-</a>
+<a href="#plans"><button>プランを見る</button></a>
 </section>
 
 <!-- PRICING -->
@@ -34,20 +31,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="plans">
 
 <!-- LIGHT -->
+<div class="plan-wrap">
+
 <div class="plan">
 <h3>ライト</h3>
 <h1>30,000円</h1>
 
-<ul class="plan-list">
-<li><i class="fa-solid fa-clock"></i> 勤怠管理</li>
-<li><i class="fa-solid fa-comments"></i> 社内チャット</li>
-<li><i class="fa-solid fa-calendar"></i> カレンダー</li>
-<li><i class="fa-solid fa-bell"></i> 通知機能</li>
+<ul>
+<li>勤怠管理</li>
+<li>社内チャット</li>
+<li>カレンダー</li>
+<li>通知機能</li>
 </ul>
 
 <details>
 <summary>もっと見る</summary>
+</details>
 
+</div>
+
+<!-- EXPAND AREA -->
+<div class="feature-expand">
 <div class="feature-grid">
 
 <div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
@@ -56,29 +60,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
 
 </div>
-
-</details>
+</div>
 
 </div>
 
 <!-- STANDARD -->
+<div class="plan-wrap">
+
 <div class="plan recommended">
 <div class="badge">おすすめ</div>
 
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
 
-<ul class="plan-list">
-<li><i class="fa-solid fa-clock"></i> 勤怠管理</li>
-<li><i class="fa-solid fa-comments"></i> 社内チャット</li>
-<li><i class="fa-solid fa-newspaper"></i> 社内報</li>
-<li><i class="fa-solid fa-calendar"></i> カレンダー</li>
-<li><i class="fa-solid fa-robot"></i> AI日報</li>
+<ul>
+<li>勤怠管理</li>
+<li>社内チャット</li>
+<li>社内報</li>
+<li>カレンダー</li>
+<li>AI日報</li>
+<li>通知機能</li>
+<li>メンバー管理</li>
+<li>連絡先管理</li>
+<li>緊急連絡先</li>
 </ul>
 
 <details open>
 <summary>もっと見る</summary>
+</details>
 
+</div>
+
+<!-- EXPAND AREA -->
+<div class="feature-expand">
 <div class="feature-grid">
 
 <div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
@@ -93,8 +107,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="feature-card"><i class="fa-solid fa-shield-halved"></i><p>緊急連絡先</p></div>
 
 </div>
-
-</details>
+</div>
 
 </div>
 
@@ -106,14 +119,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <h2>お問い合わせ</h2>
 
 <form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
-
 <input name="会社名" placeholder="会社名" required>
 <input type="email" name="メール" placeholder="メール" required>
 <textarea name="内容" placeholder="内容" required></textarea>
-
 <button type="submit">送信</button>
-
 </form>
+
 </section>
 
 <footer>© 2026 社内イントラDX</footer>

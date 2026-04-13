@@ -52,61 +52,55 @@ text-align:center;
 }
 
 .plans{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+max-width:1000px;
+margin:auto;
 }
 
+/* wrap spacing */
+.plan-wrap{
+margin-bottom:40px;
+}
+
+/* card */
 .plan{
 background:var(--card);
-padding:25px;
-border-radius:16px;
-width:260px;
+padding:30px;
+border-radius:20px;
 border:1px solid #e2e8f0;
+max-width:400px;
+margin:auto;
 }
 
+.plan ul{
+list-style:none;
+padding:0;
+margin-top:15px;
+line-height:1.8;
+}
+
+/* recommended */
 .recommended{
 border:2px solid var(--primary);
+box-shadow:0 10px 30px rgba(43,108,176,0.15);
 }
 
+/* badge */
 .badge{
-background:var(--primary);
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
 color:white;
-padding:4px 10px;
+padding:6px 14px;
 border-radius:999px;
 font-size:12px;
 display:inline-block;
-margin-bottom:8px;
-}
-
-/* plan list */
-.plan-list{
-list-style:none;
-padding:0;
-text-align:left;
-}
-
-.plan-list li{
-margin:8px 0;
-display:flex;
-align-items:center;
-gap:8px;
-}
-
-.plan-list i{
-color:var(--primary);
+margin-bottom:10px;
 }
 
 /* details */
-details{
-margin-top:10px;
-}
-
 summary{
 cursor:pointer;
-font-weight:600;
 color:var(--primary);
+font-weight:600;
+margin-top:10px;
 list-style:none;
 }
 
@@ -122,25 +116,45 @@ details[open] summary::after{
 content:" ▲";
 }
 
-/* feature grid */
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-gap:15px;
-margin-top:15px;
+/* EXPAND SECTION */
+.feature-expand{
+max-height:0;
+overflow:hidden;
+transition:0.4s ease;
 }
 
+/* SHOW */
+.plan-wrap details[open] + .feature-expand{
+max-height:600px;
+margin-top:20px;
+}
+
+/* GRID */
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+}
+
+/* CARD */
 .feature-card{
-background:#f1f5f9;
-padding:18px;
-border-radius:12px;
+background:#ffffff;
+padding:20px;
+border-radius:16px;
+border:1px solid #e2e8f0;
 text-align:center;
+transition:0.25s;
+}
+
+.feature-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .feature-card i{
-font-size:22px;
+font-size:26px;
 color:var(--primary);
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
 /* contact */
