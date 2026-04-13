@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>社内イントラDX</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=5">
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css?v=4">
-
-<!-- ICONS -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-
 
 <body>
 
-<!-- TOGGLE -->
 <button class="toggle" id="themeBtn">🌙 / ☀️</button>
 
-<!-- PROMO -->
-<div class="promo">
-おすすめプラン：50,000円（人気No.1）
-</div>
+<div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
-<!-- HERO -->
 <section class="hero">
-
 <h1>社内業務を、もっとシンプルに。</h1>
-
-<p>
-勤怠・チャット・日報・顧客管理まで<br>
-すべてを一つに集約
-</p>
-
+<p>勤怠・チャット・日報・顧客管理まで<br>すべてを一つに集約</p>
 <button>無料で相談する</button>
-
 </section>
 
-
-<!-- PRICING -->
 <section class="pricing">
-
 <h2>プラン</h2>
 
 <div class="plans">
@@ -55,24 +32,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <div class="plan" onclick="selectPlan(this)">
 <h3>ライト</h3>
 <h1>30,000円</h1>
-
 <ul>
 <li>勤怠管理</li>
 <li>社内チャット</li>
 <li>カレンダー</li>
 <li>通知機能</li>
 </ul>
-
 </div>
 
-
 <div class="plan recommended active" onclick="selectPlan(this)">
-
 <div class="badge">おすすめ</div>
-
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
-
 <ul>
 <li>勤怠管理</li>
 <li>社内チャット</li>
@@ -84,71 +55,48 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>連絡先管理</li>
 <li>緊急連絡先</li>
 </ul>
-
 </div>
 
 </div>
-
 </section>
 
-
-<!-- FEATURES -->
 <section class="features">
-
 <h2>主な機能</h2>
 
 <div class="grid">
 
-<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3><p>出勤・退勤を簡単管理</p></div>
-<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>社内チャット</h3><p>リアルタイム連絡</p></div>
-<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3><p>情報共有</p></div>
-<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3><p>予定を一元管理</p></div>
-<div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3><p>文章作成をサポート</p></div>
-<div class="card"><i class="fa-regular fa-bell"></i><h3>通知機能</h3><p>重要情報を通知</p></div>
-<div class="card"><i class="fa-regular fa-users"></i><h3>メンバー管理</h3><p>権限管理対応</p></div>
-<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3><p>情報整理</p></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>緊急連絡先</h3><p>すぐ確認可能</p></div>
+<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3></div>
+<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>社内チャット</h3></div>
+<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3></div>
+<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3></div>
+<div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3></div>
+<div class="card"><i class="fa-regular fa-bell"></i><h3>通知機能</h3></div>
+<div class="card"><i class="fa-regular fa-users"></i><h3>メンバー管理</h3></div>
+<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>緊急連絡先</h3></div>
 
 </div>
-
 </section>
 
-
-<!-- CONTACT -->
 <section class="contact">
-
 <h2>お問い合わせ</h2>
-
 <input placeholder="会社名">
 <input placeholder="メール">
 <textarea placeholder="内容"></textarea>
-
 <button>送信</button>
-
 </section>
 
+<footer>© 2026 社内イントラDX</footer>
 
-<footer>
-© 2026 社内イントラDX
-</footer>
-
-
-<!-- JS -->
 <script>
-
-// theme toggle
-document.getElementById("themeBtn").addEventListener("click", function(){
+document.getElementById("themeBtn").onclick = function(){
 document.body.classList.toggle("light");
-});
+};
 
-// pricing select
-function selectPlan(selected){
-document.querySelectorAll(".plan").forEach(p=>{
-p.classList.remove("active");
-});
-selected.classList.add("active");
+function selectPlan(el){
+document.querySelectorAll(".plan").forEach(p=>p.classList.remove("active"));
+el.classList.add("active");
 }
-
 </script>
 
 </body>
