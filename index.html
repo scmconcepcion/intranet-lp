@@ -4,14 +4,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>社内イントラDX</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 
@@ -27,18 +25,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <!-- HERO -->
 <section class="hero">
-
 <h1>社内業務をもっとシンプルに</h1>
-
-<p>
-勤怠・チャット・日報・顧客管理まで<br>
-すべて1つで完結
-</p>
-
+<p>勤怠・チャット・日報・顧客管理まで<br>すべて1つで完結</p>
 <button>無料で相談する</button>
-
 </section>
-
 
 <!-- PRICING -->
 <section class="pricing">
@@ -47,20 +37,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div class="plans">
 
-<div class="plan">
+<div class="plan" onclick="selectPlan(this)">
 <h3>ライト</h3>
 <h1>30,000円</h1>
 
 <ul>
 <li>勤怠管理</li>
-<li>社内チャット</li>
+<li>チャット</li>
 <li>カレンダー</li>
+<li>通知</li>
 </ul>
 
 </div>
 
 
-<div class="plan recommended">
+<div class="plan recommended" onclick="selectPlan(this)">
 
 <div class="badge">おすすめ</div>
 
@@ -69,13 +60,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <ul>
 <li>勤怠管理</li>
-<li>社内チャット</li>
+<li>チャット</li>
 <li>社内報</li>
 <li>カレンダー</li>
 <li>AI日報</li>
-<li>通知機能</li>
-<li>メンバー管理</li>
-<li>顧客管理</li>
+<li>通知</li>
+<li>タイムライン</li>
+<li>連絡先管理</li>
+<li>管理者機能</li>
+<li>緊急連絡</li>
+<li>顧客情報</li>
 </ul>
 
 </div>
@@ -84,7 +78,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 </section>
 
-
 <!-- FEATURES -->
 <section class="features">
 
@@ -92,111 +85,51 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <div class="grid">
 
-<div class="card">
-<i class="fa-regular fa-clock"></i>
-<h3>勤怠管理</h3>
-<p>出退勤を簡単管理</p>
-</div>
-
-<div class="card">
-<i class="fa-regular fa-comment-dots"></i>
-<h3>チャット</h3>
-<p>リアルタイム連絡</p>
-</div>
-
-<div class="card">
-<i class="fa-regular fa-calendar"></i>
-<h3>カレンダー</h3>
-<p>予定を一元管理</p>
-</div>
-
-<div class="card">
-<i class="fa-regular fa-clipboard"></i>
-<h3>日報</h3>
-<p>業務記録を効率化</p>
-</div>
-
-<div class="card">
-<i class="fa-regular fa-bell"></i>
-<h3>通知</h3>
-<p>重要情報を共有</p>
-</div>
-
-<div class="card">
-<i class="fa-regular fa-user"></i>
-<h3>メンバー管理</h3>
-<p>管理者権限対応</p>
-</div>
+<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3></div>
+<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>チャット</h3></div>
+<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3></div>
+<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3></div>
+<div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3></div>
+<div class="card"><i class="fa-regular fa-bell"></i><h3>通知</h3></div>
+<div class="card"><i class="fa-regular fa-clock-rotate-left"></i><h3>タイムライン</h3></div>
+<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3></div>
+<div class="card"><i class="fa-regular fa-user"></i><h3>管理者機能</h3></div>
+<div class="card"><i class="fa-solid fa-triangle-exclamation"></i><h3>緊急連絡</h3></div>
+<div class="card"><i class="fa-regular fa-folder"></i><h3>顧客情報</h3></div>
 
 </div>
 
 </section>
-
-
-<!-- BENEFIT -->
-<section class="benefit">
-
-<h2>業務を効率化</h2>
-
-<p>
-複数ツールをまとめて<br>
-作業時間を削減
-</p>
-
-</section>
-
-
-<!-- OPTIONS -->
-<section class="options">
-
-<h2>オプションサービス</h2>
-
-<div class="option-grid">
-
-<div class="option-card">
-<i class="fa-solid fa-file-excel"></i>
-<h3>Excel・Word講座</h3>
-<p>業務に役立つ操作をサポート</p>
-</div>
-
-<div class="option-card">
-<i class="fa-solid fa-wifi"></i>
-<h3>Wi-Fi改善</h3>
-<p>通信環境を最適化</p>
-</div>
-
-</div>
-
-</section>
-
 
 <!-- CONTACT -->
 <section class="contact">
-
 <h2>お問い合わせ</h2>
-
 <input placeholder="会社名">
 <input placeholder="メール">
 <textarea placeholder="内容"></textarea>
-
 <button>送信</button>
-
 </section>
 
-
-<footer>
-© 2026 社内イントラDX
-</footer>
-
+<footer>© 2026 社内イントラDX</footer>
 
 <!-- JS -->
 <script>
 
-const btn = document.getElementById("themeBtn");
-
-btn.addEventListener("click", function() {
+// toggle
+document.getElementById("themeBtn").addEventListener("click", function(){
   document.body.classList.toggle("light");
 });
+
+// select pricing
+function selectPlan(selected){
+
+document.querySelectorAll(".plan").forEach(p=>{
+  p.classList.remove("active");
+});
+
+selected.classList.add("active");
+
+}
 
 </script>
 
