@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="/intranet-lp/style.css?v=5">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,65 +14,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
-<!-- PROMO -->
+<!-- Promo -->
 <div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
-<!-- HERO -->
+<!-- Hero -->
 <section class="hero">
 <h1>社内業務を、もっとシンプルに。</h1>
-<p>勤怠・チャット・日報・顧客管理まで<br>すべてを一つに集約</p>
-<a href="#plans"><button>プランを見る</button></a>
+<p>
+勤怠・チャット・日報・顧客管理まで<br>
+すべてを一つに集約したイントラシステム
+</p>
+
+<button onclick="scrollToContact()">無料で相談する</button>
 </section>
 
-<!-- PRICING -->
-<section class="pricing" id="plans">
+<!-- Pricing -->
+<section class="pricing">
 <h2>プラン</h2>
 
 <div class="plans">
 
-<!-- LIGHT -->
-<div class="plan-wrap">
-
-<div class="plan">
+<div class="plan" onclick="selectPlan(this)">
 <h3>ライト</h3>
 <h1>30,000円</h1>
-
 <ul>
 <li>勤怠管理</li>
 <li>社内チャット</li>
 <li>カレンダー</li>
 <li>通知機能</li>
 </ul>
-
-<details>
-<summary>もっと見る</summary>
-</details>
-
 </div>
 
-<!-- EXPAND AREA -->
-<div class="feature-expand">
-<div class="feature-grid">
-
-<div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
-<div class="feature-card"><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
-<div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
-
-</div>
-</div>
-
-</div>
-
-<!-- STANDARD -->
-<div class="plan-wrap">
-
-<div class="plan recommended">
+<div class="plan recommended active" onclick="selectPlan(this)">
 <div class="badge">おすすめ</div>
-
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
-
 <ul>
 <li>勤怠管理</li>
 <li>社内チャット</li>
@@ -84,50 +60,63 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>連絡先管理</li>
 <li>緊急連絡先</li>
 </ul>
-
-<details open>
-<summary>もっと見る</summary>
-</details>
-
-</div>
-
-<!-- EXPAND AREA -->
-<div class="feature-expand">
-<div class="feature-grid">
-
-<div class="feature-card"><i class="fa-solid fa-clock"></i><p>勤怠管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-comments"></i><p>社内チャット</p></div>
-<div class="feature-card"><i class="fa-solid fa-newspaper"></i><p>社内報</p></div>
-<div class="feature-card"><i class="fa-solid fa-calendar"></i><p>カレンダー</p></div>
-<div class="feature-card"><i class="fa-solid fa-robot"></i><p>AI日報</p></div>
-
-<div class="feature-card"><i class="fa-solid fa-bell"></i><p>通知機能</p></div>
-<div class="feature-card"><i class="fa-solid fa-users"></i><p>メンバー管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-address-book"></i><p>連絡先管理</p></div>
-<div class="feature-card"><i class="fa-solid fa-shield-halved"></i><p>緊急連絡先</p></div>
-
-</div>
-</div>
-
 </div>
 
 </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
+<!-- Features -->
+<section class="features">
+<h2>主な機能</h2>
+
+<div class="grid">
+
+<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3></div>
+<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>社内チャット</h3></div>
+<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3></div>
+<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3></div>
+<div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3></div>
+<div class="card"><i class="fa-regular fa-bell"></i><h3>通知機能</h3></div>
+<div class="card"><i class="fa-solid fa-users"></i><h3>メンバー管理</h3></div>
+<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3></div>
+<div class="card"><i class="fa-solid fa-shield"></i><h3>緊急連絡先</h3></div>
+
+</div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
 <h2>お問い合わせ</h2>
 
 <form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
+
 <input name="会社名" placeholder="会社名" required>
 <input type="email" name="メール" placeholder="メール" required>
 <textarea name="内容" placeholder="内容" required></textarea>
-<button type="submit">送信</button>
-</form>
 
+<button type="submit">送信</button>
+
+</form>
 </section>
 
 <footer>© 2026 社内イントラDX</footer>
+
+<script>
+
+// plan selection
+function selectPlan(el){
+document.querySelectorAll(".plan").forEach(p=>p.classList.remove("active"));
+el.classList.add("active");
+}
+
+// scroll to contact
+function scrollToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior: "smooth"
+});
+}
+
+</script>
 
 </body>
 </html>
