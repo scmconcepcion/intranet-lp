@@ -49,8 +49,8 @@ cursor:pointer;
 background:var(--primary);
 text-align:center;
 padding:10px;
-font-weight:bold;
 color:white;
+font-weight:bold;
 }
 
 
@@ -75,62 +75,6 @@ margin-top:20px;
 }
 
 
-/* sections */
-
-.features,
-.options,
-.contact{
-padding:100px 20px;
-text-align:center;
-}
-
-.benefit{
-padding:100px 20px;
-text-align:center;
-background:var(--section);
-}
-
-
-/* cards */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1000px;
-margin:auto;
-margin-top:40px;
-}
-
-.card{
-background:var(--card);
-padding:30px;
-border-radius:15px;
-}
-
-.card i{
-color:var(--primary);
-}
-
-
-/* options */
-
-.option-grid{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.option-card{
-background:var(--card);
-padding:30px;
-border-radius:12px;
-width:250px;
-}
-
-
 /* pricing */
 
 .pricing{
@@ -149,13 +93,20 @@ margin-top:40px;
 
 .plan{
 background:var(--card);
-padding:30px;
-border-radius:12px;
-width:220px;
+padding:35px;
+border-radius:16px;
+width:240px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.plan h1{
+font-size:36px;
+margin:10px 0;
 }
 
 .recommended{
-border:2px solid var(--primary);
+border:3px solid var(--primary);
+transform:scale(1.08);
 }
 
 .badge{
@@ -163,10 +114,83 @@ background:var(--primary);
 color:white;
 padding:5px 10px;
 border-radius:20px;
+display:inline-block;
+margin-bottom:10px;
+}
+
+
+/* features */
+
+.features{
+padding:100px 20px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1000px;
+margin:auto;
+margin-top:40px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.card i{
+font-size:30px;
+background:var(--section);
+padding:15px;
+border-radius:50%;
+color:var(--primary);
+margin-bottom:15px;
+}
+
+
+/* benefit */
+
+.benefit{
+padding:100px 20px;
+text-align:center;
+background:var(--section);
+}
+
+
+/* options */
+
+.options{
+padding:100px 20px;
+text-align:center;
+}
+
+.option-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.option-card{
+background:var(--card);
+padding:30px;
+border-radius:12px;
+width:250px;
+text-align:center;
 }
 
 
 /* contact */
+
+.contact{
+padding:100px 20px;
+text-align:center;
+}
 
 input,textarea{
 display:block;
