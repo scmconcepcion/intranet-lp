@@ -6,7 +6,7 @@
 <title>社内イントラDX</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/intranet-lp/style.css?v=5">
+<link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -14,27 +14,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <body>
 
-<!-- Promo -->
+<!-- PROMO -->
 <div class="promo">おすすめプラン：50,000円（人気No.1）</div>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
-<h1>社内業務を、もっとシンプルに。</h1>
-<p>
-勤怠・チャット・日報・顧客管理まで<br>
-すべてを一つに集約したイントラシステム
-</p>
-
-<button onclick="scrollToContact()">無料で相談する</button>
+  <h1>社内業務を、もっとシンプルに。</h1>
+  <p>勤怠・チャット・日報・顧客管理まで、すべてを一つに集約</p>
+  <a href="#plans"><button>プランを見る</button></a>
 </section>
 
-<!-- Pricing -->
-<section class="pricing">
+<!-- PRICING -->
+<section class="pricing" id="plans">
 <h2>プラン</h2>
 
 <div class="plans">
 
-<div class="plan" onclick="selectPlan(this)">
+<div class="plan" onclick="showFeatures('light', this)">
 <h3>ライト</h3>
 <h1>30,000円</h1>
 <ul>
@@ -43,9 +39,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>カレンダー</li>
 <li>通知機能</li>
 </ul>
+<p class="more">もっと見る</p>
 </div>
 
-<div class="plan recommended active" onclick="selectPlan(this)">
+<div class="plan recommended" onclick="showFeatures('standard', this)">
 <div class="badge">おすすめ</div>
 <h3>スタンダード</h3>
 <h1>50,000円</h1>
@@ -60,63 +57,93 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <li>連絡先管理</li>
 <li>緊急連絡先</li>
 </ul>
+<p class="more">もっと見る</p>
 </div>
 
 </div>
 </section>
 
-<!-- Features -->
-<section class="features">
+<!-- FEATURES -->
+<section class="features" id="featuresSection">
 <h2>主な機能</h2>
+<div class="feature-grid" id="featureGrid"></div>
+</section>
 
-<div class="grid">
+<!-- PRODUCT -->
+<section class="product">
+<h2>メイン商品：社内イントラサイト</h2>
+<p>会社の情報共有・業務管理を<br>1つにまとめるクラウドポータル</p>
+</section>
 
-<div class="card"><i class="fa-regular fa-clock"></i><h3>勤怠管理</h3></div>
-<div class="card"><i class="fa-regular fa-comment-dots"></i><h3>社内チャット</h3></div>
-<div class="card"><i class="fa-regular fa-newspaper"></i><h3>社内報</h3></div>
-<div class="card"><i class="fa-regular fa-calendar"></i><h3>カレンダー</h3></div>
-<div class="card"><i class="fa-regular fa-clipboard"></i><h3>AI日報</h3></div>
-<div class="card"><i class="fa-regular fa-bell"></i><h3>通知機能</h3></div>
-<div class="card"><i class="fa-solid fa-users"></i><h3>メンバー管理</h3></div>
-<div class="card"><i class="fa-regular fa-address-book"></i><h3>連絡先管理</h3></div>
-<div class="card"><i class="fa-solid fa-shield"></i><h3>緊急連絡先</h3></div>
+<!-- VALUE -->
+<section class="value">
+<h2>業務をもっと効率化</h2>
+<p>複数のツールを1つにまとめて作業時間を削減</p>
+</section>
+
+<!-- OPTIONS -->
+<section class="options">
+<h2>オプションサービス</h2>
+
+<p class="sub">
+イントラ導入と合わせてサポート可能<br>
+<span class="highlight">お客様のニーズに応じたITサービスもご提供しています</span>
+</p>
+
+<div class="option-grid">
+
+<div class="option-card">
+<i class="fa-solid fa-file-excel"></i>
+<h3>Excel・Word ワンポイント講座</h3>
+<p>よく使う機能を分かりやすくサポート</p>
+</div>
+
+<div class="option-card">
+<i class="fa-solid fa-wifi"></i>
+<h3>Wi-Fi環境改善</h3>
+<p>通信トラブルや速度改善</p>
+</div>
+
+<div class="option-card">
+<i class="fa-solid fa-laptop-code"></i>
+<h3>Webデザイン</h3>
+<p>企業サイト・LP制作など柔軟に対応</p>
+</div>
+
+<div class="option-card">
+<i class="fa-solid fa-shield-halved"></i>
+<h3>ネットワーク / セキュリティ</h3>
+<p>安全で安定したIT環境を構築</p>
+</div>
+
+<div class="option-card">
+<i class="fa-solid fa-headset"></i>
+<h3>ITサポート</h3>
+<p>日常のトラブルや運用をサポート</p>
+</div>
+
+<div class="option-card">
+<i class="fa-solid fa-lightbulb"></i>
+<h3>ITコンサルティング</h3>
+<p>業務改善・DX推進をご提案</p>
+</div>
 
 </div>
 </section>
 
-<!-- Contact -->
-<section class="contact" id="contact">
+
+<!-- CONTACT -->
+<section class="contact">
 <h2>お問い合わせ</h2>
 
-<form action="mailto:shiela.concepcion@gbi.co.jp?subject=お問い合わせ" method="POST" enctype="text/plain">
-
-<input name="会社名" placeholder="会社名" required>
-<input type="email" name="メール" placeholder="メール" required>
-<textarea name="内容" placeholder="内容" required></textarea>
-
-<button type="submit">送信</button>
-
+<form action="mailto:shiela.concepcion@gbi.co.jp" method="POST" enctype="text/plain">
+<input placeholder="会社名" required>
+<input type="email" placeholder="メール" required>
+<textarea placeholder="内容" required></textarea>
+<button>送信</button>
 </form>
+
 </section>
-
-<footer>© 2026 社内イントラDX</footer>
-
-<script>
-
-// plan selection
-function selectPlan(el){
-document.querySelectorAll(".plan").forEach(p=>p.classList.remove("active"));
-el.classList.add("active");
-}
-
-// scroll to contact
-function scrollToContact(){
-document.getElementById("contact").scrollIntoView({
-behavior: "smooth"
-});
-}
-
-</script>
 
 </body>
 </html>
